@@ -1,0 +1,9 @@
+h1 {
+    font-family: 'proxima-nova-condensed', 'Arial', sans-serif;
+    margin: 0;
+}
+
+.cursive {
+    font-family: 'Lucida Handwriting', Cursive;
+    display: inline;
+}
