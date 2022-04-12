@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid ml-3 mt-3">
+    {% for row in range(rows) %}
+        <div class="row">
+        {% for column in range(3) %}
+            {% if (row * 3 + column) <= (length-1) %}
+                <div class="col mr-3 mb-3 ml-3 mt-3 image_wrap {% if column == 0 %}align-self-left{% endif %}{% if column == 1 %}align-self-middle{% endif %}{% if column == 2 %}align-self-right{% endif %}">
+                <div>
+                    <p class="image_description">{{all_uploads[row * 3 + column].description}}</p>
+                </div>
+                <div>
+                    <img class="rounded" src="{{all_uploads[row * 3 + column].url}}">
+                </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

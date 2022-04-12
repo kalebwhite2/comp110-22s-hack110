@@ -3,18 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <link rel='stylesheet' href='/static/css/styles.css' />
+        <link rel='stylesheet' href='/static/css/bootstrap.min.css' />
+        <script>
+        function scroll_to_top() {
+            window.scrollTo(0,0)
+        }
+        </script>
         <title>campusMischief {% block title %}{% endblock %} </title>
         {% block head %}{% endblock %}
     </head>
     <body>
-        <h1>campus<div class="cursive">Mischief</div></h1>
-        <ul>
-            <li>stupid<div class="cursive">StudySpots</div></li>
-            <li>stupid<div class="cursive">StudySpots</div></li>
-            <li>stupid<div class="cursive">StudySpots</div></li>
-            <li>stupid<div class="cursive">StudySpots</div></li>
-            <li>stupid<div class="cursive">StudySpots</div></li>
-            <li>stupid<div class="cursive">StudySpots</div></li>
+        <div class="sticky-top header border rounded" onclick="scroll_to_top()" style="cursor: pointer;">campus<div class="cursive" style="color:#7BAFD4;">Mischief</div></button></div>
+        <ul class="navbar nav border border-white rounded" id="sticky">
+            <a class="nav-item navlink" href="/">Home</a>
+            <a class="nav-item navlink" href="/freaky-fire-escapes">freaky<div class="cursive">FireEscapes</div></a>
+            <a class="nav-item navlink" href="/stupid_study_spots">stupid<div class="cursive">StudySpots</div></a>
+            <a class="nav-item navlink" href="/badass_bathrooms">badass<div class="cursive">Bathrooms</div></a>
+            <a class="nav-item navlink" href="/funky_fire_spots">funky<div class="cursive">FireSpots</div></a>
+            <a class="nav-item navlink" href="/crazy_coffee">crazy<div class="cursive">Coffee</div></a>
+            <a class="nav-item navlink" href="/upload" >Upload</a>
         </ul>
         {% block body %}{% endblock %}
     </body>

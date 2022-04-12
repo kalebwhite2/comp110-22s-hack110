@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %} | Upload {% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="cursive column text-center col-12" id="header">
+        Upload an Image!
+        </div>
+    </div>
+    <div class="row">
+        <div class="column text-center col-12">
+        <form method="post" enctype="multipart/form-data">
+            <br />
+            <br />
+            <label for="description">Describe your photo!</label>
+            <br />
+            <input type="text" id="description" name="description">
+            <br />
+            <br />
+            <label for="location">Where'd you take it?</label>
+            <br />
+            <input type="text" id="location" name="location">
+            <br />
+            <br />
+            <label for="section">Which section of the website is it for?</label>
+            <br />
+            <select id="section" name="section">
+                <option value="freaky_fire_escapes">Freaky Fire Escapes!</option>
+                <option value="stupid_study_spots">Stupid Study Spots!</option>
+                <option value="badass_bathrooms">Badass Bathrooms!</option>
+                <option value="funky_fire_spots">Funky Fire Spots!</option>
+                <option value="crazy_coffee">Crazy Coffee!</option>
+            </select>
+            <br />
+            <br />
+            <label for="file">Upload your image</label>
+            <br />
+            <input type="file" name="file">
+            <br />
+            <br />
+            <input type=submit value="Upload Image!">
+        </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

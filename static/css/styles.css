@@ -1,9 +1,71 @@
-h1 {
+html,body {
+    margin:0;
+    padding:0;
+}
+
+.header {
     font-family: 'proxima-nova-condensed', 'Arial', sans-serif;
-    margin: 0;
+    margin: 0px;
+    border: 0px;
+    padding: 10px;
+    background-color: black;
+    font-size: 30px;
+    color: white;
 }
 
 .cursive {
     font-family: 'Lucida Handwriting', Cursive;
     display: inline;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0px;
+    overflow: hidden;
+    width: 100%;
+    background-color: black;
+}
+
+#sticky {
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.nav-item {
+    text-align: center;
+    color: white;
+}
+
+.navi-item:hover {
+    color: #7BAFD4;
+}
+
+#header {
+    font-size: 40px;
+}
+
+img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+}
+
+.image_description {
+    position: absolute;
+    padding-left: 110px;
+    padding-top: 110px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+
+.image_wrap:hover .image_description{
+    visibility: visible;
+    opacity: 1;
+    color: white;
+}
+
+.image_wrap:hover {
+    opacity: .6;
+    color: gray;
 }
